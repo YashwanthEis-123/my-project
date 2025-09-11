@@ -110,5 +110,105 @@ function getRecursive(nr) {
  getRecursive(--nr);
  }
 }
-getRecursive(3)
+getRecursive(3);
 
+docu = [1, 2] + 1 ;
+console.log(docu);
+
+//classes and objects
+
+class Dog{
+    constructor(name, breed){
+        this.name = name;
+        this.breed = breed;
+    }
+}
+ let d = new Dog("hurry", "germanShepard");
+ console.log("dog name is: " , d.name ,  " and dog breed is:", d.breed);
+
+ //methods
+
+ class Person{
+    constructor(firstName , secondName){
+        this.firstName = firstName;
+        this.secondName = secondName;
+    }
+
+    greet(){
+        console.log("Hello ",p.secondName, p.firstName)
+    }
+
+    compliment(name, object) {
+        return "That's a wonderful: " + object + ", " + name;
+    }
+}
+ 
+ let p = new Person("sultan" , "Tippu");
+ p.greet();
+ console.log(p.compliment("Harry" , "Hat"));
+
+//Inheritence
+
+class Vehicle{
+    constructer(color, currentSpeed, maxSpeed){
+        this.color = color;
+        this.currentSpeed = currentSpeed;
+        this.maxSpeed = maxSpeed;
+
+    }
+
+    move(){
+        console.log("Car is moving:" , this.currentSpeed)
+    }
+
+    accelarate(amount){
+       this.currentSpeed += amount;
+    }
+}
+
+class motorCycle extends Vehicle{
+    constructer(color, currentSpeed, maxSpeed, fuel){
+        Super(color, currentSpeed, maxSpeed);
+        this.fuel = fuel;
+    }
+  
+    doWheelie() {
+         console.log("Driving on one wheel!");
+    }
+}
+
+let m = new motorCycle("blue", 0, 200, "petrol");
+console.log(m.color);
+m.accelarate(50);
+console.log(m.doWheelie());
+
+//builtin Java methods
+
+let str = "hello";
+console.log(str.concat(" there").toUpperCase().replace("THERE" , "you!").concat(" you are amazing!"));
+
+arryyy = [1, 20] + 1;
+console.log(arryyy)
+
+let encouragement = "You are doing great, keep up the good work!";
+let bool_start = encouragement.startsWith("You");
+console.log(bool_start);
+
+let arry = [5, 10, 15, 20];
+mm = arry.map(x => x/=5);
+console.log(mm);
+
+let Strrrr = "Hello Javascript! Iam Your learner";
+a = Strrrr.split("-");
+console.log(a); 
+
+rry = ["Hi" , "javascript", "iam" , "your" , "learner"];
+console.log(rry.join(""));
+
+let poem = "Roses are red, violets are blue, if I can do JS, then you can too!";
+let index_re = poem.indexOf("re");
+console.log(index_re);
+
+let hi = "Hi buddy";
+let new_hi = hi.replace("buddy", "Pascal");
+console.log(new_hi)
